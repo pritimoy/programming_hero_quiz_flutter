@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.appnest.programming_hero_quiz_flutter">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="programming_hero_quiz_flutter"
         android:name="${applicationName}"

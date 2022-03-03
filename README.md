@@ -3,14 +3,15 @@
 A new Flutter project.
 
 ## Getting Started
+Application link
+https://drive.google.com/drive/folders/1cwodHxqIj6dfyk3CQZByDb6iKCJr5Ftl?usp=sharing
 
-This project is a starting point for a Flutter application.
+Environment
+Flutter version: 2.10.3
+Android version: 2020.3
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+note
+If your flutter version lower then 2.10 the google fonts makes some issue 
+please comment this  textTheme: GoogleFonts.nunitoTextTheme() line and also
+google_fonts: ^2.3.1 from pubspece.yaml and run command flutter pug get or upgrade the  
+flutter version.

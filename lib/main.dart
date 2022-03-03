@@ -4,6 +4,7 @@ import 'package:programming_hero_quiz_flutter/features/quiz/home_screen.dart';
 import 'package:programming_hero_quiz_flutter/features/quiz/quiz_screen.dart';
 import 'package:programming_hero_quiz_flutter/utils/constants.dart';
 import 'package:provider/provider.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const PHQuizApp());
@@ -24,12 +25,13 @@ class _PHQuizAppState extends State<PHQuizApp> {
         ChangeNotifierProvider(create: (_) => QuizViewModel()),
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primaryColor: AppConstant.primaryColor,
           splashColor: AppConstant.primaryColor,
           scaffoldBackgroundColor: AppConstant.primaryColor,
           backgroundColor: AppConstant.primaryColor,
-          // textTheme: GoogleFonts.montagaTextTheme(),
+          textTheme: GoogleFonts.nunitoTextTheme(),
         ),
         home: HomeScreen(),
         routes: {
