@@ -25,6 +25,7 @@ class _PHQuizAppState extends State<PHQuizApp> {
         ChangeNotifierProvider(create: (_) => QuizViewModel()),
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primaryColor: AppConstant.primaryColor,
           splashColor: AppConstant.primaryColor,

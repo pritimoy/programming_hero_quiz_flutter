@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:programming_hero_quiz_flutter/data/viewmodel/quiz_view_model.dart';
 import 'package:programming_hero_quiz_flutter/utils/constants.dart';
 import 'package:programming_hero_quiz_flutter/widgets/custom_gradient_button.dart';
 import 'package:programming_hero_quiz_flutter/widgets/custom_text.dart';
+import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -14,6 +17,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    QuizViewModel quizViewModel = context.watch<QuizViewModel>();
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -40,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 textStyle: AppTextStyle.xLargeBoldWhiteTextStyle,
                 bottom: 2.0),
             CustomText(
-                text: '500 Point',
+                text: '${quizViewModel.heighScore} Point',
                 textStyle: AppTextStyle.largeBoldWhiteTextStyle,
                 bottom: 40.0),
             CustomGradientButton(
@@ -52,7 +56,9 @@ class _HomeScreenState extends State<HomeScreen> {
               buttonWidth: MediaQuery.of(context).size.width * 0.6,
               borderRadius: 8,
               buttonTextStyle: AppTextStyle.xLargeBoldBlackTextStyle,
-              onTap: () {
+              onTap: () async {
+                // quizViewModel.getQuiz();
+                // quizViewModel.getValue();
                 Navigator.pushNamed(context, '/quiz');
                 // Navigator.pushNamed(context, AppRoutes.appSignIn);
               },
