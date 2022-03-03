@@ -2,6 +2,20 @@ import 'package:flutter/material.dart';
 
 class AppConstant {
   static Color get primaryColor => Color(0xFF010233);
+  static BoxDecoration get smallRectDecoration => const BoxDecoration(
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black12,
+            offset: Offset(0, 0),
+            blurRadius: 2,
+            spreadRadius: 1,
+          ),
+        ],
+        borderRadius: BorderRadius.all(
+          Radius.circular(8),
+        ),
+      );
 }
 
 class WColors {
@@ -83,6 +97,10 @@ class AppTextStyle {
       color: Colors.white,
       fontWeight: FontWeight.bold,
       fontSize: WFont.xxLargeTextSize);
+  static TextStyle get xxxLargeBoldWhitTextStyle =>
+      xxLargeBoldWhiteTextStyle.copyWith(
+        fontSize: WFont.xxxLargeTextSize,
+      );
 
   static TextStyle get xxLargeBoldBlackTextStyle =>
       xxLargeBoldWhiteTextStyle.copyWith(
