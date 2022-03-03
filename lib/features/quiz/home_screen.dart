@@ -56,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Navigator.pushNamed(context, '/quiz');
                 // Navigator.pushNamed(context, AppRoutes.appSignIn);
               },
-            )
+            ),
           ],
         ),
       ),
