@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:programming_hero_quiz_flutter/data/viewmodel/quiz_view_model.dart';
 import 'package:programming_hero_quiz_flutter/utils/constants.dart';
 import 'package:programming_hero_quiz_flutter/widgets/custom_gradient_button.dart';
 import 'package:programming_hero_quiz_flutter/widgets/custom_text.dart';
+import 'package:provider/provider.dart';
 
 class QuizScreen extends StatefulWidget {
   const QuizScreen({Key? key}) : super(key: key);
@@ -13,6 +15,7 @@ class QuizScreen extends StatefulWidget {
 class _QuizScreenState extends State<QuizScreen> {
   @override
   Widget build(BuildContext context) {
+    QuizViewModel quizViewModel = context.watch<QuizViewModel>();
     double containerHeight = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
@@ -93,7 +96,7 @@ class _QuizScreenState extends State<QuizScreen> {
                           borderRadius: 8,
                           buttonTextStyle: AppTextStyle.largeBoldBlueTextStyle,
                           onTap: () {
-                            Navigator.pushNamed(context, '/quiz');
+                            quizViewModel.getQuiz();
                             // Navigator.pushNamed(context, AppRoutes.appSignIn);
                           },
                         ),
